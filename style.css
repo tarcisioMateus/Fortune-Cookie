@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html:not(.display) .screen-1,
+html.display .screen-2 {
+  display: none;
+}
+
+
+
+body {
+  font-size: 1.5rem;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+#app {
+  background-color: white;
+  max-width: 42.8rem;
+  padding: 4.8rem 6.4rem;
+  border-radius: .5rem;
+}
+.screen-1, .screen-2 {
+  display: grid;
+  text-align: center;
+  place-items: center;
+  gap: 1.6rem;
+}
+.screen-1 button:hover {
+  animation: shake 300ms 100ms infinite ;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  color: #34355B;
+}
+.screen-1 button {
+  background-color: transparent;
+}
+
+.screen-1 p,
+.screen-2 button {
+  font-family: 'DM Sans', sans-serif;
+}
+.screen-2 button {
+  font-size: 700;
+  color: white;
+
+  background-color: #FF9500;
+  padding: 1.6rem;
+  border-radius: .4rem;
+  width: max-content;
+}
+.screen-2 p {
+  font-size: 2.4rem;
+  font-family: 'Dancing Script', cursive;
+  background-color: #E4EDF1;
+  padding: 1rem;
+}
+
+@keyframes shake {
+  50% {
+    transform: translate3d(.2rem, .2rem, .2rem) rotate(0.01turn);
+  }
+}
